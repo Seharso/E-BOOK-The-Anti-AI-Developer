@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 1: Bahasa Pemrograman & Logika Fundamental - The Anti-AI Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body id="top">
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1>The Anti-AI Developer</h1>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="fase0.html">← Fase 0</a></li>
+                    <li><a href="fase2.html">Fase 2 →</a></li>
+                    <li><a href="#materi">Materi</a></li>
+                    <li><a href="#proyek">Proyek</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                    <li><a href="#top">↑ Top</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Fase 1: Bahasa Pemrograman & Logika Fundamental</h1>
+                <p>Durasi: 4-6 Minggu</p>
+                <p>Tujuan: Menguasai logika dan sintaks dasar pemrograman. Kami memilih JavaScript karena sangat populer, versatile (bisa untuk frontend, backend, mobile), dan memiliki komunitas besar.</p>
+            </div>
+        </section>
+
+        <section id="materi" class="content-section">
+            <div class="container">
+                <h2>Materi dalam Fase Ini</h2>
+
+                <div class="detail-card">
+                    <h3>1. Variabel & Tipe Data</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>let, const, var. Tipe data: String, Number, Boolean, Null, Undefined, Object, Array.</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>-</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Gunakan const secara default, let hanya jika nilai variabel akan berubah. Hindari var.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Jangan lupa bahwa JavaScript memiliki type coercion yang bisa tricky. 5 + "5" hasilnya "55".</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Beri nama variabel yang deskriptif. userName lebih baik dari x.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a JavaScript fundamentals tutor. [TUJUAN] I need to understand variable declarations. [INSTRUKSI] Explain the differences between var, let, and const with clear code examples. Specifically, focus on scope, hoisting, and reassignment. Create a small quiz with 3 questions to test my understanding.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="detail-card">
+                    <h3>2. Operator & Kontrol Alur (Control Flow)</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Operator aritmatika, perbandingan, logika. if/else, switch, for loop, while loop.</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 1: Kalkulator Sederhana (Console). Buat program yang meminta 2 angka dan operator (+, -, *, /), lalu tampilkan hasilnya.</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Gunakan === (strict equality) daripada == untuk menghindari bug tak terduga.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Hati-hati dengan infinite loops. Pastikan kondisi loop Anda akan terpenuhi untuk berhenti.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Untuk iterasi array, gunakan forEach atau map (nanti akan dipelajari) daripada for loop klasik, lebih modern dan mudah dibaca.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a coding interviewer. [TUJUAN] I want to practice control flow. [INSTRUKSI] Give me a classic beginner problem: "Write a function that takes a number and returns 'Fizz' if it's divisible by 3, 'Buzz' if it's divisible by 5, and 'FizzBuzz' if it's divisible by both. Otherwise, return the number." After I give you my answer, review it and suggest improvements.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="detail-card">
+                    <h3>3. Fungsi (Functions)</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Deklarasi fungsi, ekspresi fungsi, arrow function. Konsep parameter, argumen, return. Scope (global vs lokal).</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 2: Konversi Suhu. Buat fungsi celsiusToFahrenheit(celsius) dan fahrenheitToCelsius(fahrenheit). Panggil fungsi ini dengan beberapa nilai dan tampilkan hasilnya di console.</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Fungsi harus melakukan satu hal dengan baik (Single Responsibility Principle).</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Jangan membuat fungsi dengan terlalu banyak parameter (lebih dari 3-4). Jika perlu, gunakan objek sebagai parameter.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Gunakan default parameter untuk membuat fungsi lebih robust. function greet(name = 'Guest') { ... }</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a code quality expert. [TUJUAN] I just wrote a function that is 50 lines long and does many things. [INSTRUKSI] Explain the concept of "Single Responsibility Principle" for functions. Show me how to refactor a hypothetical long function into smaller, more manageable functions. Provide a "before" and "after" code example.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="detail-card">
+                    <h3>4. Struktur Data: Array & Object</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Manipulasi array: push, pop, shift, unshift, slice, splice. Method tingkat tinggi: map, filter, reduce, find. Manipulasi object: add, delete, access properties.</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 3: To-Do List (Console). Simpan to-do items dalam sebuah array of objects. Setiap object memiliki id, text, dan completed (boolean). Buat fungsi untuk addTodo, deleteTodo, dan toggleComplete.</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Method map, filter, reduce adalah pilar pemrograman fungsional di JavaScript. Kuasai ini!</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Jangan mengubah array secara langsung (mutation). Gunakan map atau filter yang mengembalikan array baru. Ini mencegah side effects.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Gunakan console.log() secara liberal untuk debugging. Lihat isi variabel Anda di setiap langkah.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a JavaScript sensei. [TUJUAN] I'm struggling to understand the reduce method. [INSTRUKSI] Explain reduce with a simple analogy (e.g., a factory assembly line). Then, show me three practical examples: 1) Summing an array of numbers, 2) Flattening an array of arrays, 3) Grouping objects in an array by a property.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyek" class="content-section">
+            <div class="container">
+                <h2>Proyek Nyata</h2>
+                <div class="project-detail">
+                    <h3>Proyek 1: Kalkulator Sederhana (Console)</h3>
+                    <p>Buat program yang meminta 2 angka dan operator (+, -, *, /), lalu tampilkan hasilnya. Gunakan if/else atau switch untuk memilih operasi.</p>
+                    
+                    <h3>Proyek 2: Konversi Suhu</h3>
+                    <p>Buat fungsi celsiusToFahrenheit(celsius) dan fahrenheitToCelsius(fahrenheit). Panggil fungsi ini dengan beberapa nilai dan tampilkan hasilnya di console.</p>
+                    
+                    <h3>Proyek 3: To-Do List (Console)</h3>
+                    <p>Simpan to-do items dalam sebuah array of objects. Setiap object memiliki id, text, dan completed (boolean). Buat fungsi untuk addTodo, deleteTodo, dan toggleComplete.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-practices" class="content-section">
+            <div class="container">
+                <h2>Best Practices & Tips</h2>
+                <div class="best-practices">
+                    <h3>Best Practices untuk Fase 1:</h3>
+                    <ul>
+                        <li>Gunakan const secara default, let hanya jika nilai variabel akan berubah. Hindari var.</li>
+                        <li>Beri nama variabel yang deskriptif. userName lebih baik dari x.</li>
+                        <li>Gunakan === (strict equality) daripada == untuk menghindari bug tak terduga.</li>
+                        <li>Fungsi harus melakukan satu hal dengan baik (Single Responsibility Principle).</li>
+                        <li>Method map, filter, reduce adalah pilar pemrograman fungsional di JavaScript. Kuasai ini!</li>
+                        <li>Jangan mengubah array secara langsung (mutation). Gunakan metode fungsional.</li>
+                        <li>Gunakan console.log() secara liberal untuk debugging.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Anti-AI Developer Roadmap. Dunia sedang menanti karya Anda.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

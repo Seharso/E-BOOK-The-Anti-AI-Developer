@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 3: Otak & Jantung Aplikasi - The Anti-AI Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body id="top">
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1>The Anti-AI Developer</h1>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="fase2.html">← Fase 2</a></li>
+                    <li><a href="fase4.html">Fase 4 →</a></li>
+                    <li><a href="#materi">Materi</a></li>
+                    <li><a href="#proyek">Proyek</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                    <li><a href="#top">↑ Top</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Fase 3: Otak & Jantung Aplikasi</h1>
+                <p>Durasi: 8-10 Minggu</p>
+                <p>Tujuan: Mampu membuat server, mengelola data, dan membangun API yang akan digunakan oleh frontend.</p>
+            </div>
+        </section>
+
+        <section id="materi" class="content-section">
+            <div class="container">
+                <h2>Materi dalam Fase Ini</h2>
+
+                <div class="detail-card">
+                    <h3>1. Node.js & Express.js</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Konsep server, request/response cycle. Menginstall Express, routing, middleware. Menangani parameter di URL dan request body.</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 7: API To-Do List. Buat server dengan Express. Buat endpoint: GET /todos (ambil semua), GET /todos/:id (ambil satu), POST /todos (tambah baru), DELETE /todos/:id (hapus). Untuk sementara, simpan datanya di array di memory server.</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Gunakan nodemon agar server restart otomatis saat ada perubahan kode.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Jangan pernah mempercayai input dari user (client). Selalu lakukan validasi di server.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Struktur folder yang baik: routes, controllers, models, middleware.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a Node.js/Express expert. [TUJUAN] I don't understand what middleware is. [INSTRUKSI] Explain middleware using the analogy of an assembly line or a series of security checkpoints. Show me how to write a simple logging middleware and an error-handling middleware in Express.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="detail-card">
+                    <h3>2. Database: SQL & PostgreSQL</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Konsep database relasional. Query dasar: CREATE TABLE, INSERT, SELECT, UPDATE, DELETE. JOIN. Menghubungkan Node.js ke database dengan library seperti pg atau ORM seperti Prisma/Sequelize.</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 8: API To-Do List dengan Database. Modifikasi Proyek 7. Ganti array di memory dengan database PostgreSQL. Buat tabel todos. Semua operasi CRUD sekarang harus berinteraksi dengan database.</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Mulai dengan SQL murni sebelum beralih ke ORM. Ini membantu Anda memahami apa yang terjadi di balik layar.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>SQL Injection adalah serangan berbahaya. Gunakan prepared statements atau parameterized query (ORM melakukan ini untuk Anda).</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Gunakan environment variables (.env file) untuk menyimpan kredensial database. Jangan hardcode di dalam aplikasi.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a database administrator. [TUJUAN] I need to design a database for a simple blog. [INSTRUKSI] Propose a database schema for a blog with 'users', 'posts', and 'comments'. Show me the SQL CREATE TABLE statements for each table and explain the relationships (one-to-many, etc.) between them using foreign keys.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="detail-card">
+                    <h3>3. Autentikasi & Keamanan</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Konsep JWT (JSON Web Tokens). Hashing password (dengan bcrypt). Membuat sistem register & login. Middleware untuk melindungi route (hanya user yang login bisa akses).</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 9: API dengan Register & Login. Tambahkan fitur user pada API To-Do List. User harus register dan login untuk mendapatkan token. Token ini digunakan untuk mengakses endpoint todos miliknya saja.</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Simpan JWT di HttpOnly cookie, bukan di localStorage untuk mencegah serangan XSS.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Jangan pernah menyimpan password dalam bentuk plain text. SELALU hash.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Prinsip terkecil hak istimewa (Principle of Least Privilege). Berikan akses seminimal mungkin.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a cybersecurity expert. [TUJUAN] I want to implement user authentication. [INSTRUKSI] Explain the flow of JWT-based authentication from user login to accessing a protected route, step-by-step. Also, explain what 'hashing' a password is, why it's crucial, and how it's different from encryption.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyek" class="content-section">
+            <div class="container">
+                <h2>Proyek Nyata</h2>
+                <div class="project-detail">
+                    <h3>Proyek 7: API To-Do List</h3>
+                    <p>Buat server dengan Express. Buat endpoint: GET /todos (ambil semua), GET /todos/:id (ambil satu), POST /todos (tambah baru), DELETE /todos/:id (hapus). Untuk sementara, simpan datanya di array di memory server.</p>
+                    
+                    <h3>Proyek 8: API To-Do List dengan Database</h3>
+                    <p>Modifikasi Proyek 7. Ganti array di memory dengan database PostgreSQL. Buat tabel todos. Semua operasi CRUD sekarang harus berinteraksi dengan database.</p>
+                    
+                    <h3>Proyek 9: API dengan Register & Login</h3>
+                    <p>Tambahkan fitur user pada API To-Do List. User harus register dan login untuk mendapatkan token. Token ini digunakan untuk mengakses endpoint todos miliknya saja.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-practices" class="content-section">
+            <div class="container">
+                <h2>Best Practices & Tips</h2>
+                <div class="best-practices">
+                    <h3>Best Practices untuk Fase 3:</h3>
+                    <ul>
+                        <li>Gunakan nodemon agar server restart otomatis saat ada perubahan kode.</li>
+                        <li>Struktur folder yang baik: routes, controllers, models, middleware.</li>
+                        <li>Jangan pernah mempercayai input dari user (client). Selalu lakukan validasi di server.</li>
+                        <li>Mulai dengan SQL murni sebelum beralih ke ORM. Ini membantu Anda memahami apa yang terjadi di balik layar.</li>
+                        <li>Gunakan environment variables (.env file) untuk menyimpan kredensial database.</li>
+                        <li>Simpan JWT di HttpOnly cookie, bukan di localStorage untuk mencegah serangan XSS.</li>
+                        <li>SELALU hash password, jangan pernah menyimpan dalam bentuk plain text.</li>
+                        <li>Terapkan prinsip terkecil hak istimewa (Principle of Least Privilege).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Anti-AI Developer Roadmap. Dunia sedang menanti karya Anda.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

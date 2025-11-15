@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 2: Seni Membangun Antarmuka - The Anti-AI Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body id="top">
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1>The Anti-AI Developer</h1>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="fase1.html">← Fase 1</a></li>
+                    <li><a href="fase3.html">Fase 3 →</a></li>
+                    <li><a href="#materi">Materi</a></li>
+                    <li><a href="#proyek">Proyek</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                    <li><a href="#top">↑ Top</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Fase 2: Seni Membangun Antarmuka</h1>
+                <p>Durasi: 6-8 Minggu</p>
+                <p>Tujuan: Mampu membuat website yang interaktif, responsif, dan enak dipandang.</p>
+            </div>
+        </section>
+
+        <section id="materi" class="content-section">
+            <div class="container">
+                <h2>Materi dalam Fase Ini</h2>
+
+                <div class="detail-card">
+                    <h3>1. HTML5: Kerangka Website</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Semantic HTML: &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;. Form, input types, media (img, video).</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 4: Halaman Profil Statis. Buat halaman HTML sederhana tentang Anda. Gunakan semantic HTML. Include foto, paragraf bio, daftar skill, dan form kontak (tanpa styling dulu).</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Gunakan ekstensi "Emmet" di VS Code untuk menulis HTML lebih cepat.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Jangan gunakan &lt;table&gt; untuk layout. Itu adalah praktik kuno.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Selalu sertakan atribut alt pada tag &lt;img&gt; untuk aksesibilitas. Validasi HTML Anda menggunakan W3C Validator.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a web accessibility specialist. [TUJUAN] I want to build a website that is accessible to everyone. [INSTRUKSI] Explain the importance of semantic HTML5 tags for accessibility and SEO. Give me 5 common accessibility mistakes beginners make with HTML and how to fix them.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="detail-card">
+                    <h3>2. CSS3: Gaya & Tata Letak</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Selectors, Box Model, Positioning, Flexbox, CSS Grid. Transisi & animasi dasar. Konsep responsive design dengan media queries.</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 5: Halaman Profil Responsif. Ambil Proyek 4 dan berikan styling dengan CSS. Buat layout yang rapi dengan Flexbox/Grid. Pastikan tampilan bagus di desktop dan mobile (gunakan media queries).</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Gunakan Chrome DevTools (F12) untuk meng-inspect dan bereksperimen dengan CSS secara real-time.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>"Div soup" (terlalu banyak &lt;div&gt; tanpa makna) adalah tanda HTML yang buruk.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Gunakan Custom Properties (CSS Variables) untuk warna dan font yang berulang. Ini memudahkan maintenance.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a senior CSS developer. [TUJUAN] I'm confused about when to use Flexbox and when to use CSS Grid. [INSTRUKSI] Explain the primary use cases for both, their core differences (1D vs 2D layout), and provide a visual example (using ASCII art or a clear description) of a layout that is better suited for Grid and one for Flexbox.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="detail-card">
+                    <h3>3. JavaScript DOM: Membuat Halaman Interaktif</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Mengakses elemen DOM (querySelector, getElementById). Manipulasi elemen (ubah teks, style, atribut). Event handling (click, submit, scroll). Web APIs: fetch untuk mengambil data dari server.</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 6: Aplikasi Cuaca Sederhana. Buat halaman dengan input kota. Saat user submit, gunakan fetch untuk mengambil data cuaca dari API publik (misal: OpenWeatherMap) dan tampilkan hasilnya di halaman.</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Delegasi event adalah teknik powerful untuk menangani event di banyak elemen secara efisien.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Jangan memblokir rendering dengan JavaScript yang lambat. Letakkan tag &lt;script&gt; di akhir &lt;body&gt; atau gunakan defer.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Pisahkan concerns: HTML untuk struktur, CSS untuk style, JavaScript untuk logika. Jangan gunakan inline onclick atribut di HTML.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a frontend mentor. [TUJUAN] I'm trying to build a to-do list app but my 'delete' button doesn't work on new items I add. [INSTRUKSI] Explain the concept of "Event Delegation" in the DOM. Show me a 'before' code example that has this problem and an 'after' code example that uses event delegation to solve it.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyek" class="content-section">
+            <div class="container">
+                <h2>Proyek Nyata</h2>
+                <div class="project-detail">
+                    <h3>Proyek 4: Halaman Profil Statis</h3>
+                    <p>Buat halaman HTML sederhana tentang Anda. Gunakan semantic HTML. Include foto, paragraf bio, daftar skill, dan form kontak (tanpa styling dulu).</p>
+                    
+                    <h3>Proyek 5: Halaman Profil Responsif</h3>
+                    <p>Ambil Proyek 4 dan berikan styling dengan CSS. Buat layout yang rapi dengan Flexbox/Grid. Pastikan tampilan bagus di desktop dan mobile (gunakan media queries).</p>
+                    
+                    <h3>Proyek 6: Aplikasi Cuaca Sederhana</h3>
+                    <p>Buat halaman dengan input kota. Saat user submit, gunakan fetch untuk mengambil data cuaca dari API publik (misal: OpenWeatherMap) dan tampilkan hasilnya di halaman.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-practices" class="content-section">
+            <div class="container">
+                <h2>Best Practices & Tips</h2>
+                <div class="best-practices">
+                    <h3>Best Practices untuk Fase 2:</h3>
+                    <ul>
+                        <li>Selalu sertakan atribut alt pada tag &lt;img&gt; untuk aksesibilitas.</li>
+                        <li>Validasi HTML Anda menggunakan W3C Validator.</li>
+                        <li>Gunakan ekstensi "Emmet" di VS Code untuk menulis HTML lebih cepat.</li>
+                        <li>Gunakan Chrome DevTools (F12) untuk meng-inspect dan bereksperimen dengan CSS secara real-time.</li>
+                        <li>Gunakan Custom Properties (CSS Variables) untuk warna dan font yang berulang.</li>
+                        <li>Delegasi event adalah teknik powerful untuk menangani event di banyak elemen secara efisien.</li>
+                        <li>Pisahkan concerns: HTML untuk struktur, CSS untuk style, JavaScript untuk logika.</li>
+                        <li>Jangan memblokir rendering dengan JavaScript yang lambat.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Anti-AI Developer Roadmap. Dunia sedang menanti karya Anda.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

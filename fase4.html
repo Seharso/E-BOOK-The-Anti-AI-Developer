@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 4: Simfoni Full-Stack & Profesionalisme - The Anti-AI Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body id="top">
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1>The Anti-AI Developer</h1>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="fase3.html">← Fase 3</a></li>
+                    <li><a href="fase5.html">Fase 5 →</a></li>
+                    <li><a href="#materi">Materi</a></li>
+                    <li><a href="#proyek">Proyek</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                    <li><a href="#top">↑ Top</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Fase 4: Simfoni Full-Stack & Profesionalisme</h1>
+                <p>Durasi: 6-8 Minggu</p>
+                <p>Tujuan: Menggabungkan frontend dan backend, menerapkan praktik terbaik, dan menyiapkan diri untuk dunia profesional.</p>
+            </div>
+        </section>
+
+        <section id="materi" class="content-section">
+            <div class="container">
+                <h2>Materi dalam Fase Ini</h2>
+
+                <div class="detail-card">
+                    <h3>1. Menghubungkan Frontend & Backend</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Menggunakan fetch di frontend untuk berkomunikasi dengan API backend yang Anda buat. Menangani CORS. Menampilkan data dari API dan mengirim data ke API.</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 10: Aplikasi To-Do List Full-Stack. Hubungkan frontend dari Proyek 6 dengan backend dari Proyek 9. Sekarang Anda memiliki aplikasi web yang lengkap dan fungsional!</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Gunakan Chrome DevTools tab "Network" untuk memantau request/response antara frontend dan backend. Sangat berguna untuk debugging.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Pastikan backend Anda aman. Jangan biarkan semua orang bisa mengakses endpoint Anda tanpa autentikasi.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Kelola state di frontend dengan baik. Untuk aplikasi kompleks, pertimbangkan untuk belajar state management library seperti Redux atau Zustand.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a full-stack integration specialist. [TUJUAN] My frontend React app can't fetch data from my Node.js backend and I'm getting a CORS error. [INSTRUKSI] Explain what CORS is in simple terms. Then, provide the exact code I need to add to my Express.js server to fix this issue for development.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="detail-card">
+                    <h3>2. Testing</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Konsep TDD/BDD. Unit Testing (menguji satu fungsi/unit kecil, misal dengan Jest). Integration Testing (menguji bagaimana beberapa unit bekerja sama). E2E Testing (menguji alur user dari awal hingga akhir, misal dengan Cypress).</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 11: Menambahkan Testing. Tambahkan unit test untuk beberapa fungsi utilitas di backend Anda. Tambahkan satu integration test untuk endpoint API Anda.</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Mulai dari yang kecil. Test fungsi-fungsi murni (pure function) yang tidak memiliki side effects lebih mudah.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Jangan terobsesi dengan 100% test coverage. Fokus pada bagian-bagian kritis dari aplikasi Anda.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>"Test yang tidak dijalankan adalah test yang tidak berguna." Otomatiskan proses testing Anda.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a QA engineer. [TUJUAN] I'm new to testing. [INSTRUKSI] Explain the difference between Unit, Integration, and End-to-End (E2E) testing using the analogy of building a car. For each type, give me a simple example of what you would test in our To-List application.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="detail-card">
+                    <h3>3. Deployment (CI/CD)</h3>
+                    
+                    <h4>Penjelasan Detail</h4>
+                    <p>Menggunakan layanan seperti Vercel (untuk frontend) dan Render/Heroku (untuk backend). Konsep dasar CI/CD dengan GitHub Actions (otomasi test dan deploy saat push ke GitHub).</p>
+                    
+                    <h4>Proyek Nyata</h4>
+                    <p>Proyek 12: Deploy Aplikasi To-Do List. Deploy frontend Anda ke Vercel dan backend Anda ke Render. Pastikan keduanya terhubung dan berjalan live di internet!</p>
+                    
+                    <h4>Tips & Trik</h4>
+                    <p>Baca dokumentasi layanan deployment yang Anda pilih. Mereka biasanya memiliki panduan yang sangat bagus.</p>
+                    
+                    <h4>Warning</h4>
+                    <p>Jangan pernah commit environment variables (.env) ke GitHub. Setelnya melalui dashboard layanan deployment Anda.</p>
+                    
+                    <h4>Best Practice</h4>
+                    <p>Mulai dengan manual deploy dulu. Setelah nyaman, pelajari otomasi dengan GitHub Actions.</p>
+                    
+                    <details>
+                        <summary>Prompt AI Siap Pakai</summary>
+                        <div class="ai-prompt">
+                            [PERAN AI] Act as a DevOps mentor. [TUJUAN] I've just pushed my code to GitHub and now I want to deploy it. [INSTRUKSI] Create a step-by-step checklist for deploying a simple Node.js/Express API to Render.com. Include steps for setting up the database, environment variables, and connecting a GitHub repository.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyek" class="content-section">
+            <div class="container">
+                <h2>Proyek Nyata</h2>
+                <div class="project-detail">
+                    <h3>Proyek 10: Aplikasi To-Do List Full-Stack</h3>
+                    <p>Hubungkan frontend dari Proyek 6 dengan backend dari Proyek 9. Sekarang Anda memiliki aplikasi web yang lengkap dan fungsional!</p>
+                    
+                    <h3>Proyek 11: Menambahkan Testing</h3>
+                    <p>Tambahkan unit test untuk beberapa fungsi utilitas di backend Anda. Tambahkan satu integration test untuk endpoint API Anda.</p>
+                    
+                    <h3>Proyek 12: Deploy Aplikasi To-Do List</h3>
+                    <p>Deploy frontend Anda ke Vercel dan backend Anda ke Render. Pastikan keduanya terhubung dan berjalan live di internet!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-practices" class="content-section">
+            <div class="container">
+                <h2>Best Practices & Tips</h2>
+                <div class="best-practices">
+                    <h3>Best Practices untuk Fase 4:</h3>
+                    <ul>
+                        <li>Gunakan Chrome DevTools tab "Network" untuk memantau request/response antara frontend dan backend.</li>
+                        <li>Kelola state di frontend dengan baik. Pertimbangkan state management library untuk aplikasi kompleks.</li>
+                        <li>Mulai dari yang kecil. Test fungsi-fungsi murni (pure function) yang tidak memiliki side effects lebih mudah.</li>
+                        <li>Jangan terobsesi dengan 100% test coverage. Fokus pada bagian-bagian kritis.</li>
+                        <li>Otomatiskan proses testing Anda.</li>
+                        <li>Baca dokumentasi layanan deployment yang Anda pilih.</li>
+                        <li>Jangan pernah commit environment variables (.env) ke GitHub.</li>
+                        <li>Mulai dengan manual deploy dulu, lalu pelajari otomasi dengan GitHub Actions.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Anti-AI Developer Roadmap. Dunia sedang menanti karya Anda.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
